@@ -14,4 +14,4 @@ RUN apt install -y qgis qgis-plugin-grass
 
 RUN Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
 RUN Rscript -e 'remotes::install_github("paleolimbot/qgisprocess")'
-RUN Rscript -e 'install.packages(c("dplyr", "sf", "tidyverse", "magrittr", "tidyr", "raster", "rgdal", "stringr", "purrr", "data.table", "furrr", "gdalUtils"))
+RUN Rscript -e 'install.packages(c("dplyr", "sf", "tidyverse", "magrittr", "tidyr", "raster", "rgdal", "stringr", "purrr", "data.table", "furrr", "gdalUtils"))'
