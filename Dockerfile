@@ -18,4 +18,4 @@ RUN chmod a+rwx /rscripts/requirements.R
 
 RUN Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
 RUN Rscript -e 'remotes::install_github("paleolimbot/qgisprocess")'
-RUN Rscript -e requirements.R
+RUN Rscript requirements.R
