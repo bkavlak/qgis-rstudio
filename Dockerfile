@@ -14,7 +14,7 @@ RUN apt install -y qgis qgis-plugin-grass
 
 RUN mkdir rscripts
 COPY /requirements.R /rscripts/
-RUN chmod a+rwx requirements.R
+RUN chmod a+rwx /rscripts/requirements.R
 
 RUN Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")'
 RUN Rscript -e 'remotes::install_github("paleolimbot/qgisprocess")'
