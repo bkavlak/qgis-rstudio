@@ -5,7 +5,7 @@ ENV LANG=en_US.UTF-8
 
 RUN apt-get update
 RUN apt install -y gnupg software-properties-common
-RUN wget -qO - https://qgis.org/downloads/qgis-2020.gpg.key | gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+RUN wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
 RUN chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
 RUN add-apt-repository "deb https://qgis.org/ubuntu $(lsb_release -c -s) main"
 # update
